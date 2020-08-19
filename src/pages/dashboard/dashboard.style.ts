@@ -11,6 +11,7 @@ const StyleTitle = styled.h1`
 
 const Form = styled.form`
     margin-top: 40px;
+    margin-bottom: 80px;
     max-width: 700px;
     display: flex;
 
@@ -46,6 +47,7 @@ const Form = styled.form`
 const Repositories = styled.div`
     display: flex;
     flex-direction: column;
+    min-height: 550px;
 `;
 
 export { StyleTitle as Title, Form, Repositories };

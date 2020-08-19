@@ -1,5 +1,6 @@
 import React from 'react';
 import { CardStyle } from './card.style'
+import { FiChevronRight } from 'react-icons/fi'
 
 interface propsCard {
     link: string,
@@ -19,8 +20,11 @@ export const CardUser: React.FC<propsCard> = (props: propsCard) => {
     return (
         <CardStyle>
             <a href={`${link}`} > <img src={img} /> </a>
-            <a href={`${link}`} > <strong>{title}</strong> </a>
-            <h1>{description}</h1>
-        </CardStyle>
+            <div className="agroup">
+                <a href={`${link}`} ><strong>{title}</strong> </a>
+                <p>{description}</p>
+            </div>
+            <FiChevronRight size={25} />
+        </CardStyle >
     );
 }

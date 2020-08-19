@@ -1,5 +1,4 @@
 import React from 'react';
-
 import logoImg from '../../assets/svgs/logo.svg'
 import {
     Title,
@@ -23,7 +22,18 @@ export const Dashboard: React.FC = () => {
             </Form>
 
             <Repositories>
-                <CardUser img={dd} link={'https://github.com/luccas-specht'} description='top' title='luccas' />
+                <CardUser
+                    img={dd}
+                    link={'https://github.com/luccas-specht'}
+                    description='Easy peasey highy scaleble ReactJS & React Native forms!'
+                    title='luccas'
+                />
+                <CardUser
+                    img={dd}
+                    link={'https://github.com/luccas-specht'}
+                    description='Easy peasey highy scaleble ReactJS & React Native forms!'
+                    title='luccas'
+                />
             </Repositories>
 
         </>
