@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import logoImg from '../../assets/svgs/logo.svg'
 import {
     Title,
@@ -9,6 +9,7 @@ import {
 import { useGitHubApi } from '../../../hook'
 import { CardUser } from '../../components'
 
+import dd from '../../assets/img/dd.jpeg'
 interface RepositoryApi {
     full_name: string;
     description: string;
@@ -37,7 +38,6 @@ export const Dashboard: React.FC = () => {
     async function getNewRepository() {
         const response = await getRepository(newRepository);
         setCards([...cards, response])
-        setNewRepository('')
     }
 
     useEffect(() => {
@@ -56,6 +56,8 @@ export const Dashboard: React.FC = () => {
             </Form>
 
             <Repositories>
+                {/* 13:24*/}
+
                 {cards.map(card =>
                     <CardUser
                         key={card?.full_name}
@@ -64,10 +66,15 @@ export const Dashboard: React.FC = () => {
                         description={card?.description}
                         title={card?.full_name}
                     />
-
                 )}
-            </Repositories>
 
+                {/* <CardUser
+                    img={dd}
+                    link={'https://app.rocketseat.com.br/node/nivel-03/group/criando-a-aplicacao/lesson/conectando-a-api'}
+                    description={'Criação de um app que se assemelha ao jogo original FlappyBird, usando a biblioteca, lib GDX, para Android em java, na qual pude aprender a consumir a biblioteca e gerar animações em 2D.'}
+                    title={'oi'}
+                /> */}
+            </Repositories>
         </>
     )
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import { CardStyle } from './card.style'
 import { FiChevronRight } from 'react-icons/fi'
 
