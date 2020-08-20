@@ -18,13 +18,15 @@ export const CardUser: React.FC<propsCard> = (props: propsCard) => {
     } = props
 
     return (
-        <CardStyle>
-            <a href={`${link}`} > <img src={img} /> </a>
-            <div className="agroup">
-                <a href={`${link}`} ><strong>{title}</strong> </a>
-                <p>{description}</p>
-            </div>
-            <FiChevronRight size={25} />
-        </CardStyle >
+        <>
+            <CardStyle>
+                <a href={`${link}`} > <img src={img} /> </a>
+                <div className="agroup">
+                    <a href={`${link}`} ><strong>{title}</strong> </a>
+                    <p>{description}</p>
+                </div>
+                <FiChevronRight size={25} />
+            </CardStyle >
+        </>
     );
 }

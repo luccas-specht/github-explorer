@@ -1,0 +1,1 @@
+export { useGitHubApi } from './use-github-api/use-github-api.hook'
