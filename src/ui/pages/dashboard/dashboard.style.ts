@@ -47,7 +47,7 @@ const Form = styled.form`
 const Repositories = styled.div`
     display: flex;
     flex-direction: column;
-    min-height: 550px;
+    min-height: 500px;
 `;
 
 export { StyleTitle as Title, Form, Repositories };

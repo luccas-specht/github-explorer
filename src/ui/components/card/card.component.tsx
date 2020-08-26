@@ -1,22 +1,17 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { CardStyle } from './card.style'
 import { FiChevronRight } from 'react-icons/fi'
 
 interface propsCard {
-    link: string,
-    img: string,
-    title: string,
-    description: string,
+    id?: number
+    link?: string,
+    img?: string,
+    title?: string,
+    description?: string,
 }
 
-export const CardUser: React.FC<propsCard> = (props: propsCard) => {
-    const {
-        img,
-        link,
-        title,
-        description
-    } = props
-
+export const CardUser: React.FC<propsCard> = ({ id, img, link, title, description }: propsCard) => {
     return (
         <>
             <CardStyle>
@@ -25,7 +20,7 @@ export const CardUser: React.FC<propsCard> = (props: propsCard) => {
                     <a href={`${link}`} ><strong>{title}</strong> </a>
                     <p>{description}</p>
                 </div>
-                <FiChevronRight size={25} />
+                <Link to={{ pathname: `/repository/${id}`, state: { title } }}><FiChevronRight size={25} /> </Link>
             </CardStyle >
         </>
     );

@@ -42,6 +42,7 @@ const CardStyle = styled.div`
     }
 
     svg{
+        min-width: 25px;
         margin-top: 5px;
         margin-left: auto;
         color:#cbcbd6;

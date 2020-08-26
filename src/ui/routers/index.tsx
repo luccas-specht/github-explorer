@@ -6,6 +6,6 @@ export const Routes: React.FC = () => (
     <Switch>
         <Route path='/' component={Dashboard} exact />
         <Route path='/dashboard' component={Dashboard} exact />
-        <Route path='/repository' component={Repository} exact />
+        <Route path='/repository/:id' component={Repository} />
     </Switch>
 )
