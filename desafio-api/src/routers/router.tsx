@@ -11,7 +11,7 @@ export const Routes: React.FC = () => (
 
 
         {/* privates here */}
-        <Route path='/client' component={ClientDetails} exact />
+        <Route path='/client-details/:id' component={ClientDetails} exact />
         <Route path='/client/:id' component={ClientsList} exact />
     </Switch>
 );

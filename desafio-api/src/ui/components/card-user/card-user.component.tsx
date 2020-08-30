@@ -36,10 +36,10 @@ export const CardUser: React.FC<PropsCardUser> = ({ image, name, id }) => (
             <IoMdCalendar size={25} color='#65AB57' />
             <IoMdChatboxes size={23} color='#65AB57' />
             <TiArrowForwardOutline size={23} color='#65AB57' />
-            <Link to='#'>
+            <Link to={`/client-details/${id}`}>
                 <FaPenSquare size={25} color='#373737' />
             </Link>
-            <Link to='#'>
+            <Link to={`/client-details/${id}`}>
                 <FiChevronRight size={20} color='#373737' />
             </Link>
         </ContainerRight>
